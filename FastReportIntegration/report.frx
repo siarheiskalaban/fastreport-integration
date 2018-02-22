@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="02/22/2018 23:01:58" ReportInfo.Modified="02/22/2018 23:19:48" ReportInfo.CreatorVersion="2018.1.11.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="Outers" ReferenceName="Outers" DataType="null" Enabled="true">
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Second" DataType="FastReportIntegration.Inner" Enabled="true">
+        <Column Name="Name" DataType="System.String"/>
+      </Column>
+      <BusinessObjectDataSource Name="Inner" DataType="null" Enabled="true">
+        <Column Name="Name" DataType="System.String"/>
+        <BusinessObjectDataSource Name="Referreds" DataType="null" Enabled="true">
+          <Column Name="Name" DataType="System.String"/>
+        </BusinessObjectDataSource>
+      </BusinessObjectDataSource>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <PageHeaderBand Name="PageHeader1" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data1" Top="32.35" Width="718.2" Height="132.3" DataSource="Outers">
+      <TextObject Name="Text1" Left="9.45" Top="9.45" Width="699.3" Height="18.9" Text="Outer: [Outers.Name]"/>
+      <TextObject Name="Text3" Left="9.45" Top="37.8" Width="699.3" Height="28.35" Text="Inner: [Outers.Inner.Name]"/>
+      <TextObject Name="Text2" Left="9.45" Top="66.15" Width="699.3" Height="28.35" Text="Referred: [Outers.Inner.Referreds.Name]"/>
+      <TextObject Name="Text2" Left="9.45" Top="99.15" Width="699.3" Height="28.35" Text="Second: [Outers.Second.Name]"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="168.65" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

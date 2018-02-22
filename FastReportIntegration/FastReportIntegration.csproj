@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastReport" Version="2018.1.0-demo" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReferrencedProject\ReferrencedProject.csproj" />
+  </ItemGroup>
+
+</Project>
